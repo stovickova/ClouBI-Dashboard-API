@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ah5EmkRMCNTK57O3HOGZOJVy4P5O9PoqrYUZNwjeXHw62MnndFlld/00BGknH4M93w1MBPwQr6FE/OiImHU5jw==",
+  "dgSpecHash": "9S5miXkb1LzmHuNJNPhf6+gFAG50jUH0gXKKaxRxrGA3JXxqcWmxmrj1BjqEljzF2UfvBFGdhR3lvf6zRMtl7g==",
   "success": true,
-  "projectFilePath": "C:\\ambica\\DashboardTestApi\\DashboardTestApi\\DashboardTestApi.csproj",
+  "projectFilePath": "C:\\ambica\\projects\\ClouBI-Dashboard-API\\ClouBI-Dashboard-API\\DashboardTestApi\\DashboardTestApi.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages\\devexpress.aspnetcore.common\\21.1.3\\devexpress.aspnetcore.common.21.1.3.nupkg.sha512",
     "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages\\devexpress.aspnetcore.core\\21.1.3\\devexpress.aspnetcore.core.21.1.3.nupkg.sha512",
