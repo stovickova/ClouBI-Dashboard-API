@@ -30,10 +30,10 @@ namespace DashboardTestApi
                 using (NpgsqlConnection con = new NpgsqlConnection(connectionString))// "Host=localhost:5432;Database=ambica;Username=ambica;Password=ambica"))  // "postgres://localhost:5432/ambica?user=ambica&password=ambica"/*connectionString*/))
                 {
 
-                    //                    using (NpgsqlCommand cmd = new NpgsqlCommand($"INSERT INTO public.outputs (Name, XmlData) output INSERTED.ID SELECT ('{dashboardName}', '{document.ToString()}')", con))
-                    //                    using (NpgsqlCommand cmd = new NpgsqlCommand($"INSERT INTO public.outputs (Name, XmlData) SELECT (@n, @x) RETURNING public.outputs.id", con))
-                    using (NpgsqlCommand cmd = new NpgsqlCommand($"INSERT INTO public.outputs (id, name, type, xmldata) VALUES (@i, @n, @t, @x)", con))
-                //    using (NpgsqlCommand cmd = new NpgsqlCommand($"INSERT INTO public.outputs (name, xmldata) SELECT (@n, @x)", con))
+                    //                    using (NpgsqlCommand cmd = new NpgsqlCommand($"INSERT INTO demo.outputs (Name, XmlData) output INSERTED.ID SELECT ('{dashboardName}', '{document.ToString()}')", con))
+                    //                    using (NpgsqlCommand cmd = new NpgsqlCommand($"INSERT INTO demo.outputs (Name, XmlData) SELECT (@n, @x) RETURNING demo.outputs.id", con))
+                    using (NpgsqlCommand cmd = new NpgsqlCommand($"INSERT INTO demo.outputs (id, name, type, xmldata) VALUES (@i, @n, @t, @x)", con))
+                //    using (NpgsqlCommand cmd = new NpgsqlCommand($"INSERT INTO demo.outputs (name, xmldata) SELECT (@n, @x)", con))
                     {
                         try
                         {
@@ -41,7 +41,7 @@ namespace DashboardTestApi
 
                             int max = 1;
 
-                            using (NpgsqlCommand cmd1 = new NpgsqlCommand("select max(id) from public.outputs", con))
+                            using (NpgsqlCommand cmd1 = new NpgsqlCommand("select max(id) from demo.outputs", con))
                             {
                                 max = (int)cmd1.ExecuteScalar();
                             }
@@ -168,7 +168,7 @@ namespace DashboardTestApi
             {
                 using (NpgsqlConnection con = new NpgsqlConnection(connectionString))// "Host=localhost:5432;Database=ambica;Username=ambica;Password=ambica"))  // "postgres://localhost:5432/ambica?user=ambica&password=ambica"/*connectionString*/))
                 {
-                    using (NpgsqlCommand cmd = new NpgsqlCommand($"UPDATE public.outputs Set xmldata = @x WHERE ID = @i", con))
+                    using (NpgsqlCommand cmd = new NpgsqlCommand($"UPDATE demo.outputs Set xmldata = @x WHERE ID = @i", con))
                     {
                         try
                         {

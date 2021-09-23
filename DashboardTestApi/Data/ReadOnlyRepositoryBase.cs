@@ -53,7 +53,7 @@ namespace DashboardTestApi.Data
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))// "Host=localhost:5432;Database=ambica;Username=ambica;Password=ambica"))  // "postgres://localhost:5432/ambica?user=ambica&password=ambica"/*connectionString*/))
             {
                 //            using (SqlCommand cmd = new SqlCommand("[amb].[GetAccecibleDocuments]", con))
-                using (NpgsqlCommand cmd = new NpgsqlCommand($"select xmldata from public.outputs where id = {outputId}", con))
+                using (NpgsqlCommand cmd = new NpgsqlCommand($"select xmldata from demo.outputs where id = {outputId}", con))
                 {
 
                     try
@@ -145,7 +145,7 @@ namespace DashboardTestApi.Data
                 {
 
                     //            using (SqlCommand cmd = new SqlCommand("[amb].[GetAccecibleDocuments]", con))
-                    using (NpgsqlCommand cmd = new NpgsqlCommand("select id, name, type from public.outputs", con))
+                    using (NpgsqlCommand cmd = new NpgsqlCommand("select id, name, type from demo.outputs", con))
                     {
 
                         /*      cmd.CommandType = CommandType.StoredProcedure;
