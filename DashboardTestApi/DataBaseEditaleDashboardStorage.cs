@@ -150,13 +150,14 @@ namespace DashboardTestApi
         //    if (dashboardInfos == null)
             {
                 dashboardInfos = new List<DashboardInfo>();
+                dashboardInfos.Add(new DashboardInfo() { ID = "1", Name = "Ahoj Davide!" });
 
-                var data = repository.GetOutputs(connectionString);
+           /*     var data = repository.GetOutputs(connectionString);
 
                 foreach (var di in data)
                 {
                     dashboardInfos.Add(new DashboardInfo() { ID = di.Id.ToString(), Name = di.Name });
-                }
+                }*/
             }
 
             return dashboardInfos;
